@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	</head>
+	<body>
+
+
+		<!-- Banner -->
+			<section id="banner" img="/images/e1.jpg">
+				<div class="inner">
+					<h1>Fun with Twitter API</h1>
+					<p>Enter Twitter handle (without @)</p>
+					<p><%= msg %></p>
+					<form method="post" action="/">
+					<div class="field half first">
+						<h3 class="log">Twitter Handle</h3>
+						<input type="text" name="username" id="un" value="<%= username %>">
+						<input type="submit" value="Get Results!" style="margin-top: 2em">
+					</div>
+					
+					 
+					<div class="field half first">
+						
+						<h3 class="log">Number of followers: <%= follow%></h3>
+				        <h3 class="log">Number of Tweets:  <%= tweet%></h3>
+				        <h3 class="log">Most recent Tweet: <%= recent%></h3>
+						<!-- <input type="password" name="password" id="pw"> -->
+					</div>
+					<!-- <br> -->
+					<!-- <button type="submit" class="button special">Login</button> -->
+					</form>
+				</div>
+			</section>
+
+<!-- <form action="/" method="POST">
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-lg-12">
+ 			<div class="content">
+ 				<h1>Fun with Twitter API</h1>
+ 				<h3>Enter twitter handle (without @)</h3>
+ 				<hr>
+        <form>
+          <input type="text" name="username" placeholder="Twitter Handle" value="<%= username %>">
+        </form>
+        <br>
+ 				 <input type="submit" value="Get Results!"> 
+                </form>
+        <h3 id="p1">Number of followers: <%= follow%></h3>
+        <h3>Number of Tweets:  <%= tweet%></h3>
+        <h3>Most recent Tweet: <%= recent%></h3>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div> -->
+
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
