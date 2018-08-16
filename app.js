@@ -42,13 +42,23 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
     // console.log(params);
     // console.log("--------------------");
     // console.log(obj2);
-    
-    res.render('index',{follow:obj2[0].user.followers_count,
-                        tweet:obj2[0].user.statuses_count,
-                         recent:obj2[0].text,
-                        username:req.body.username,
-                        msg:"There you go!"
-                        });
+      if(obj2[0] == undefined){
+        res.render('index',{follow:"",
+                          tweet:"",
+                           recent:"",
+                           username:"",
+                           msg:"OOPS! Seems like you have entered an invalid handle. Try again!"
+                          });
+      }
+      else
+      {
+        res.render('index',{follow:obj2[0].user.followers_count,
+                                tweet:obj2[0].user.statuses_count,
+                                 recent:obj2[0].text,
+                                username:req.body.username,
+                                msg:"There you go!"
+                                });
+      }
   }
   else
   {
